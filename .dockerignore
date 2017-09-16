@@ -1,1 +1,10 @@
 /node_modules
+test
+.circleci
+.editorconfig
+.gitignore
+.verb.md
+commit-if-changed.sh
+docker-compose.dev.yml
+Dockerfile
+README.md

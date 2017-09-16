@@ -9,7 +9,7 @@ WORKDIR $HOME
 
 COPY ./package.json ./index.js ./
 
-RUN npm install
+RUN npm install --production
 
 COPY /src ./src/
 
