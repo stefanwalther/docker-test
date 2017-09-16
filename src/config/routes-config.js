@@ -1,12 +1,16 @@
+const path = require('path');
+const glob = require('glob');
+const logger = require('winster').instance();
 
-// Load routes
-const defaultRoutes = require('./../modules/default/default.controller');
-const healthCheckRoutes = require('./../modules/health-check/health-check.routes');
-
+// Load routes based on the pattern './../modules/**/*.routes.js
 function init(app) {
 
-  app.use('/', healthCheckRoutes);
-  app.use('/', defaultRoutes.get);
+  let routes = glob.sync(path.join(__dirname, './../modules/**/*.routes.js'));
+  routes.forEach(r => {
+    logger.trace('Registering route', r);
+    let route = require(r);
+    app.use('/', route);
+  })
 
 }
 
