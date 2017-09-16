@@ -1,6 +1,6 @@
 class DefaultController {
 
-  static get (req, res) {
+  static get(req, res) {
     console.log('We are here');
     if (req.query.output === 'text') {
       res.send('Hello World').end();

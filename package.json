@@ -12,7 +12,12 @@
     "dc-up:dev": "docker-compose --f=./docker-compose.dev.yml up",
     "prepush": "npm run docs && ./commit-if-changed.sh",
     "test": "npm run test:integration",
-    "test:integration": "mocha './test/integration/**/*.spec.js' --require './test/mocha.conf.js' --timeout 6000"
+    "test:integration": "mocha './test/integration/**/*.spec.js' --require './test/mocha.conf.js' --timeout 6000",
+    "lint": "npm run lint:src && npm run lint:test",
+    "lint:src": "eslint src",
+    "lint:src:fix": "eslint src --fix",
+    "lint:test": "eslint test",
+    "lint:test:fix": "eslint test --fix"
   },
   "repository": {
     "type": "git",

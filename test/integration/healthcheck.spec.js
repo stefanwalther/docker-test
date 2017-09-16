@@ -1,3 +1,4 @@
+/* global describe, before, after, it, expect */
 const superTest = require('supertest');
 const HttpStatus = require('http-status-codes');
 const AppServer = require('./../../src/app-server');
