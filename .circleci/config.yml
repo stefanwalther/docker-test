@@ -32,4 +32,12 @@ jobs:
           command: |
             VER=$(cat ./version.txt)
             docker build -t $DOCKER_REPO:$VER .
+      - deploy:
+          name: Push image to Docker Hub
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              VER=$(cat ./version.txt)
+              docker tag $DOCKER_REPO:$VER $DOCKER_REPO:latest
+            fi
+            docker push $DOCKER_REPO
 
