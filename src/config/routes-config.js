@@ -7,9 +7,9 @@ const healthCheckRoutes = require('./../modules/health-check/health-check.routes
 function init(app) {
 
 
-  app.use('/', defaultRoutes.get);
-  // /health-check
   app.use('/', healthCheckRoutes);
+  app.use('/', defaultRoutes.get);
+
 
 }
 

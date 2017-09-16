@@ -1,8 +1,9 @@
-const pkg = require('./../../../package.json');
+const pkgUp = require('pkg-up');
+const pkg = require(pkgUp.sync('.'));
 
 class HealthController {
 
-  static get(req, res, next) {
+  static get(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.send({
       ts: new Date().toJSON(),
@@ -10,9 +11,7 @@ class HealthController {
       name: pkg.name,
       repository: pkg.repository
     });
-    next();
   }
-
 }
 
 module.exports = HealthController;

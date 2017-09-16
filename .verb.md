@@ -43,5 +43,8 @@ services:
 ### Multistage Builds
 
 **References:**
+- https://capgemini.github.io/development/multi-stage-builds-in-docker/
 - https://codefresh.io/blog/node_docker_multistage/
+- https://blog.alexellis.io/mutli-stage-docker-builds/
+- https://github.com/yamalight/node-docker-pkg-demo
 

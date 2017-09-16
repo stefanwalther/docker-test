@@ -1,4 +1,4 @@
-const AppServer = require('./src/index.js');
+const AppServer = require('./src/app-server');
 
 const config = {
   PORT: process.env.PORT || 3004
