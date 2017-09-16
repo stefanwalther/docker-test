@@ -2,6 +2,10 @@
 
 > Sample docker image to test various scenarios with Docker.
 
+[![CircleCI](https://circleci.com/gh/stefanwalther/docker-test.svg?style=svg)](https://circleci.com/gh/stefanwalther/docker-test)
+
+---
+
 ## Motivation
 
 Just another "Hello World" docker image to be used in various experiments ...
@@ -31,4 +35,6 @@ services:
 ```
 
 ## Configuration
+
+- `PORT` - Port of the web service, defaults to 3000.
 
