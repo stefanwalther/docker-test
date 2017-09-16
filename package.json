@@ -10,7 +10,8 @@
     "start": "node ./index.js",
     "docs": "docker run --rm -v ${PWD}:/opt/verb stefanwalther/verb",
     "dc-up:devb": "docker-compose --f=./docker-compose.dev.yml up --build",
-    "dc-up:dev": "docker-compose --f=./docker-compose.dev.yml up"
+    "dc-up:dev": "docker-compose --f=./docker-compose.dev.yml up",
+    "precommit": "npm run docs"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,7 @@
   "keywords": [
     "docker",
     "hello-world",
-    "node.js",
-    "nodejs",
-    "express"
+    "node.js"
   ],
   "author": "Stefan Walther <swr.nixda@gmail.com> (http://qliksite.io)",
   "license": "MIT",
@@ -32,5 +31,8 @@
   "dependencies": {
     "express": "^4.15.3",
     "winster": "^0.2.5"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3"
   }
 }
