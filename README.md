@@ -38,5 +38,10 @@ services:
 
 - `PORT` - Port of the web service, defaults to 3000.
 
-fcab
+## Experiments
+
+### Multistage Builds
+
+**References:**
+- https://codefresh.io/blog/node_docker_multistage/
 
