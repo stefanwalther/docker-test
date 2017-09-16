@@ -2,7 +2,9 @@
 
 > Sample docker image to test various scenarios with Docker.
 
-[![CircleCI](https://circleci.com/gh/stefanwalther/docker-test.svg?style=svg)](https://circleci.com/gh/stefanwalther/docker-test)
+[![CircleCI](https://img.shields.io/circleci/project/github/stefanwalther/docker-test.svg)](https://circleci.com/gh/stefanwalther/docker-test/tree/master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/stefanwalther/docker-test.svg)](https://greenkeeper.io/)
+[![XO code style](https://img.shields.io/badge/code_style-XO--space-5ed9c7.svg)](https://github.com/sindresorhus/eslint-config-xo-space)
 
 ---
 
