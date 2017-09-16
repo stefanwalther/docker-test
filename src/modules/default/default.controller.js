@@ -1,4 +1,4 @@
-class DefaultController {
+class Controller {
 
   static get(req, res) {
     console.log('We are here');
@@ -11,4 +11,4 @@ class DefaultController {
   }
 }
 
-module.exports = DefaultController;
+module.exports = Controller;

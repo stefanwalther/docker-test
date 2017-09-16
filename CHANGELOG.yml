@@ -1,0 +1,8 @@
+v0.2.0:
+  date: "2017-09-17"
+  changes:
+    - "Add endpoint cmd"
+v0.1.0:
+  date: "2017-089-16"
+  changes:
+    - "Initial commit"

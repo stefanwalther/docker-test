@@ -1,7 +1,7 @@
 const pkgUp = require('pkg-up');
 const pkg = require(pkgUp.sync('.'));
 
-class HealthController {
+class Controller {
 
   static get(req, res) {
     res.setHeader('Content-Type', 'application/json');
@@ -14,4 +14,4 @@ class HealthController {
   }
 }
 
-module.exports = HealthController;
+module.exports = Controller;

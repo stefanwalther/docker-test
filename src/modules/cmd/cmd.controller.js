@@ -1,12 +1,21 @@
+const { exec } = require('child_process');
+const logger = require('winster').instance();
+
 class CmdController {
 
-  static get(req, res) {
-    if (req.query.output === 'text') {
-      res.send('Hello World').end();
-    } else {
+  // curl -o -I -L -s -w "%{http_code}\n" http://localhost:3004/health-check
+  static get(req, res, next) {
 
-      res.json({text: 'Hello World'}).end();
-    }
+    let cmdToExec = req.query.def || 'ls -la';
+    logger.trace('Command to execute', cmdToExec);
+
+    exec(cmdToExec, (err, stdout, stderr) => {
+      if (err) {
+        res.json(err);
+        next();
+      }
+      res.json({'result': stdout});
+    })
   }
 }
 

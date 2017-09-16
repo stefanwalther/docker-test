@@ -1,6 +1,6 @@
 {
   "name": "docker-test",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Sample docker image to test various scenarios with Docker.",
   "main": "index.js",
   "scripts": {
