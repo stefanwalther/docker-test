@@ -8,3 +8,4 @@ commit-if-changed.sh
 docker-compose.dev.yml
 Dockerfile
 README.md
+/scripts

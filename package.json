@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "d-build": "docker build -t stefanwalther/hello-world .",
-    "d-run": "docker run -it stefanwalther/hello-world",
+    "d-build": "docker build -t stefanwalther/docker-test .",
+    "d-run": "docker run -it stefanwalther/docker-test",
     "start": "node ./index.js",
     "docs": "docker run --rm -v ${PWD}:/opt/verb stefanwalther/verb",
     "dc-up:devb": "docker-compose --f=./docker-compose.dev.yml up --build",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stefanwalther/docker-nodejs-hello-world.git"
+    "url": "git+https://github.com/stefanwalther/docker-test.git"
   },
   "keywords": [
     "docker",
@@ -25,9 +25,9 @@
   "author": "Stefan Walther <swr.nixda@gmail.com> (http://qliksite.io)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stefanwalther/docker-nodejs-hello-world/issues"
+    "url": "https://github.com/stefanwalther/docker-test/issues"
   },
-  "homepage": "https://github.com/stefanwalther/docker-nodejs-hello-world#readme",
+  "homepage": "https://github.com/stefanwalther/docker-test#readme",
   "dependencies": {
     "express": "^4.15.3",
     "winster": "^0.2.5"
