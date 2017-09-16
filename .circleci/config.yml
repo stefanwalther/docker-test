@@ -32,6 +32,9 @@ jobs:
           command: |
             VER=$(cat ./version.txt)
             docker build -t $DOCKER_REPO:$VER .
+      - run:
+          name: Login to Docker
+          command: docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
       - deploy:
           name: Push image to Docker Hub
           command: |
@@ -40,4 +43,5 @@ jobs:
               docker tag $DOCKER_REPO:$VER $DOCKER_REPO:latest
             fi
             docker push $DOCKER_REPO
+      # test: https://github.com/moby/moby/issues/21280
 
