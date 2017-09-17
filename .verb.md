@@ -42,13 +42,13 @@ services:
 
 ## Endpoints
 
-`/`
+### `/`
 Just returns a "Hello World"
 
-`/health-check`
+### `/health-check`
 Returns a typical health-check, useful to test health-checks in a microservice environment.
 
-`cmd`
+### `cmd`
 Execute any command on the machine and get the result.
 
 Parameters:
@@ -64,7 +64,7 @@ Examples:
   - `ls -la` - list the directory
   - `curl -o -I -L -s -w "%{http_code}\n" http://localhost:3004/health-check` - Get the Http status code of the health-check
 
-`cmd-cron`
+#### `cmd-cron`
 Create a cron job, executing a command.
 
 Parameters:
