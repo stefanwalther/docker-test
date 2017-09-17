@@ -1,3 +1,7 @@
+v0.3.0:
+  date: "2017-09-17"
+  changes:
+    - "Add endpoint cmd-cron"
 v0.2.0:
   date: "2017-09-17"
   changes:

@@ -1,6 +1,6 @@
 {
   "name": "docker-test",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Sample docker image to test various scenarios with Docker.",
   "main": "index.js",
   "scripts": {
@@ -38,6 +38,7 @@
   "dependencies": {
     "express": "^4.15.3",
     "glob": "^7.1.2",
+    "node-schedule": "^1.2.4",
     "pkg-up": "^2.0.0",
     "winster": "^0.2.5"
   },
