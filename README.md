@@ -42,9 +42,42 @@ services:
 
 ## Endpoints
 
-- `/`- Just returns a "Hello World".
-- `health-check` - Returns a typical health-check, useful to test health-checks in a microservice environment.
-- `cmd` - Execute any command on the machine and get the result, e.g. `ls -la` or `curl -o -I -L -s -w "%{http_code}\n" http://localhost:3004/health-check`.
+`/`
+Just returns a "Hello World"
+
+`/health-check`
+Returns a typical health-check, useful to test health-checks in a microservice environment.
+
+`cmd`
+Execute any command on the machine and get the result.
+
+Parameters:
+- `def` - The command to execute.
+
+Usage:
+```sh
+# Execute an ls -la
+$ curl http://localhost:3004/cmd/?def=ls%20-la
+```
+
+Examples:
+  - `ls -la` - list the directory
+  - `curl -o -I -L -s -w "%{http_code}\n" http://localhost:3004/health-check` - Get the Http status code of the health-check
+
+`cmd-cron`
+Create a cron job, executing a command.
+
+Parameters:
+
+- `def` - The command to execute.
+- `cron` - The cron definition (see [https://crontab-generator.org/](https://crontab-generator.org/))
+
+Usage:
+
+```sh
+# Execute and "echo foo" with the following cron def: "* * * * *" (every minute)
+$ curl http://localhost:3004/cmd-cron?def=echo%20foo&cron=*%20*%20*%20*%20*
+```
 
 ## Experiments
 
