@@ -50,5 +50,24 @@
     "husky": "^0.14.3",
     "mocha": "^3.5.3",
     "supertest": "^3.0.0"
+  },
+  "verb": {
+    "run": true,
+    "toc": true,
+    "layout": "empty",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": [ ]
+    },
+    "lint": {
+      "reflinks": true
+    },
+    "reflinks": [
+    ]
   }
 }
