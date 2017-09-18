@@ -117,6 +117,7 @@ $ curl http://localhost:3004/cmd-cron?def=echo%20foo&cron=*%20*%20*%20*%20*
 - [ ] Enable codecov
 - [ ] Use multistage builds to truly separate images
 - [ ] Use nodemon to watch changes locally
+- [ ] Optimize precommit (husky) to not run it if there were no changes in either .verb.md or in ./docs
 
 ## About
 
