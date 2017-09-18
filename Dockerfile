@@ -1,4 +1,4 @@
-FROM node:8.5.0-alpine
+FROM node:8.5.0-alpine as BASE
 
 ARG PORT=3000
 ENV PORT=$PORT
@@ -12,6 +12,8 @@ COPY ./package.json ./index.js ./
 RUN npm install --production
 
 COPY /src ./src/
+
+FROM BASE as RELEASE
 
 EXPOSE $PORT
 
