@@ -10,7 +10,7 @@ function init(app) {
     logger.trace('Registering route', r);
     let route = require(r);
     app.use('/', route);
-  })
+  });
 
 }
 
