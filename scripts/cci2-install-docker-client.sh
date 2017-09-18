@@ -2,6 +2,7 @@
 set -e
 VER=$1
 TRACK=$2
+
 # See list of builds:
 #   stable: https://download.docker.com/linux/static/stable/x86_64/
 #   edge: https://download.docker.com/linux/static/edge/x86_64/

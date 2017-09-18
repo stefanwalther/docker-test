@@ -1,3 +1,7 @@
+v0.3.1:
+  date: "2017-09-18"
+  changes:
+    - "Enable basic multi-stage build + adapt CircleCi scripts"
 v0.3.0:
   date: "2017-09-17"
   changes:
