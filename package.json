@@ -32,7 +32,7 @@
     "lint:src:fix": "eslint src --fix",
     "lint:test": "eslint test",
     "lint:test:fix": "eslint test --fix",
-    "prepush": "./docs-if-necessary.sh",
+    "prepush": "npm run docs-if-necessary",
     "start": "node ./index.js",
     "start:watch": "nodemon ./index.js",
     "test": "npm run test:integration",
