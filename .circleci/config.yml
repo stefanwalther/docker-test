@@ -13,9 +13,9 @@ jobs:
       - add_ssh_keys
       - setup_remote_docker:
           version: 17.07.0-ce
-      #- run:
-      #    name: Install Docker client
-      #    command: ./scripts/cci2-install-docker-client.sh 17.07.0-ce
+      - run:
+          name: Install Docker client
+          command: ./scripts/cci2-install-docker-client.sh "17.07.0-ce" "edge"
       - run:
           name: Update version tag
           command: |
