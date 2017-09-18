@@ -11,7 +11,7 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - add_ssh_keys
-      - setup_remote_docker
+      - setup_remote_docker:
           version: 17.07.0-ce
       #- run:
       #    name: Install Docker client
