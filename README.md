@@ -26,6 +26,7 @@ Just another "Hello World" docker image to be used in various experiments ...
   * [`/cmd-cron`](#cmd-cron)
 - [Experiments](#experiments)
   * [Multistage Builds](#multistage-builds)
+- [Todo](#todo)
 - [About](#about)
   * [Author](#author)
   * [Contributing](#contributing)
@@ -111,6 +112,11 @@ $ curl http://localhost:3004/cmd-cron?def=echo%20foo&cron=*%20*%20*%20*%20*
 - https://codefresh.io/blog/node_docker_multistage/
 - https://blog.alexellis.io/mutli-stage-docker-builds/
 - https://github.com/yamalight/node-docker-pkg-demo
+
+## Todo
+- [ ] Enable codecov
+- [ ] Use multistage builds to truly separate images
+- [ ] Use nodemon to watch changes locally
 
 ## About
 
