@@ -1,5 +1,4 @@
-const pkgUp = require('pkg-up');
-const pkg = require(pkgUp.sync('.'));
+const pkg = require('read-pkg-up').sync().pkg;
 
 class Controller {
 
