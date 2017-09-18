@@ -15,7 +15,7 @@ jobs:
           version: 17.07.0-ce
       - run:
           name: Install Docker client
-          command: ./scripts/cci2-install-docker-client.sh 17.07.0-ce
+          command: ./scripts/cci2-install-docker-client.sh "17.07.0-ce"
       - run:
           name: Update version tag
           command: |
