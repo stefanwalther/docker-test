@@ -10,7 +10,7 @@ jobs:
       - checkout
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
-      #- add_ssh_keys
+      - add_ssh_keys
       - setup_remote_docker
       - run:
           name: Install Docker client
