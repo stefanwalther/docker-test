@@ -34,7 +34,7 @@
     "lint:test:fix": "eslint test --fix",
     "prepush": "npm run docs-if-necessary",
     "start": "node ./index.js",
-    "start:watch": "nodemon ./index.js",
+    "start:watch": "npm install nodemon -g && nodemon ./src/index.js",
     "test": "npm run test:integration",
     "test:integration": "mocha './test/integration/**/*.spec.js' --require './test/mocha.conf.js' --timeout 6000"
   },
