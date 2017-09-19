@@ -1,6 +1,5 @@
 /node_modules
 /scripts
-/test
 .circleci
 .editorconfig
 .gitignore
