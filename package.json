@@ -41,9 +41,9 @@
   "dependencies": {
     "express": "^4.15.3",
     "glob": "^7.1.2",
-    "node-schedule": "^1.2.4",
+    "node-schedule": "^1.2.5",
     "read-pkg-up": "^2.0.0",
-    "winster": "^0.2.5"
+    "winster": "^0.2.6"
   },
   "devDependencies": {
     "chai": "^4.1.2",
