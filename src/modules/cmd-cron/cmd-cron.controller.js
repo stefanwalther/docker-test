@@ -4,12 +4,15 @@ const schedule = require('node-schedule');
 
 class CmdController {
 
+  // Todo: Definitely not a get ;-)
   static get(req, res) {
 
     let cron = req.query.cron || '* * * * *'; // Defaults to every minute
     let cmdToExec = req.query.def || 'echo This is the echo result of the cron job';
 
     logger.trace('Crating cron job:', cmdToExec, cron);
+    
+    // Todo: Store them in memory, so we can cancel them afterwards
     schedule.scheduleJob(cron, () => {
       exec(cmdToExec, (err, stdout /* , stderr */) => {
         if (err) {
