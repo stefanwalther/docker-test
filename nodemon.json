@@ -1,0 +1,10 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    ".data",
+    "node_modules/**/node_modules"
+  ],
+  "verbose": true,
+  "ext": "js json"
+}

@@ -47,6 +47,8 @@ FROM BASE as RELEASE
 COPY --from=dependencies /app/prod_node_modules ./node_modules
 COPY /src ./src/
 
+COPY ./nodemon.json ./
+
 EXPOSE $PORT
 
 CMD ["npm", "run", "start"]

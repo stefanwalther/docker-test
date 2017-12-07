@@ -1,0 +1,35 @@
+version: '3.3'
+
+services:
+  docker-test:
+    build: .
+    command: ["npm", "run", "start:watch"]
+    volumes:
+      - ./src:/app/src
+    environment:
+      - DOCKER_LABELS=true
+    labels:
+      - io.sammler.env=DEV
+      - io.sammler.service=docker-test
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:5.2.2
+    ports:
+      - "10514:10514"
+      - "5000:5000"
+      - "5000:5000/udp"
+      - "12201"           # gelf
+      - "12201:12201/udp" # gelf udp port
+#    expose:
+#      - "12201"
+    environment:
+      - LOGSPOUT=ignore
+      - DROP_NON_JSON=false
+      - STDOUT=true
+      - LS_JAVA_OPTS=-Xmx256m -Xms256m
+      - LOGZ_ACCOUNT_TOKEN=${S5R_LOGZ_ACCOUNT_TOKEN}
+    volumes:
+      - ./.data/logstash/logs:/usr/share/logstash/logs
+      - ./configs/logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - ./configs/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
+

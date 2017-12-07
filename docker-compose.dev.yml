@@ -1,8 +1,11 @@
 version: '3.3'
 
 services:
-  hello-world:
+  docker-test:
+    container_name: docker-test
     build: .
     command: ["npm", "run", "start:watch"]
     volumes:
       - ./src:/app/src
+
+

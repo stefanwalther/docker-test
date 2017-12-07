@@ -14,6 +14,17 @@ class AppServer {
   _initApp() {
     this.app = express();
     routesConfig.init(this.app);
+
+    setInterval(() => {
+      logger.fatal('logger:fatal', 'Some message');
+      logger.error('logger:error', {error: 'This is the error message', errorCode: 204});
+      logger.debug('logger:debug');
+      logger.warn('logger:warn');
+      logger.data('logger:data');
+      logger.info('logger:info');
+      logger.verbose('logger:verbose');
+      logger.trace('logger:trace');
+    }, 10000);
   }
 
   start() {

@@ -1,3 +1,8 @@
+v0.3.2:
+  date: "2017-12-07"
+  changes:
+    - "Make port 3000 the default everywhere"
+    - "Add a Makefile"
 v0.3.1:
   date: "2017-09-18"
   changes:
