@@ -47,7 +47,7 @@
     "node-schedule": "^1.2.5",
     "read-pkg-up": "^4.0.0",
     "winster": "^0.2.6",
-    "winston-logstash": "^0.3.0"
+    "winston-logstash": "^0.4.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
