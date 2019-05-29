@@ -1,7 +1,7 @@
 # --------------------------------------
 #               BASE NODE
 # --------------------------------------
-FROM node:8.11.3-alpine as BASE
+FROM node:8.16.0-alpine as BASE
 
 ARG PORT=3000
 ENV PORT=$PORT
