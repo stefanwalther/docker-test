@@ -3,7 +3,6 @@
 > Sample docker image to test various scenarios with Docker.
 
 [![CircleCI](https://img.shields.io/circleci/project/github/stefanwalther/docker-test.svg)](https://circleci.com/gh/stefanwalther/docker-test/tree/master)
-[![Greenkeeper badge](https://badges.greenkeeper.io/stefanwalther/docker-test.svg)](https://greenkeeper.io/)
 [![XO code style](https://img.shields.io/badge/code_style-XO--space-5ed9c7.svg)](https://github.com/sindresorhus/eslint-config-xo-space)
 
 ---
@@ -133,7 +132,7 @@ Pull requests and stars are always welcome. For bugs and feature requests, [plea
 I cannot guarantee that I will merge all PRs but I will evaluate them all.
 
 ### License
-Copyright © 2017, [Stefan Walther](http://qliksite.io).
+Copyright © 2020, [Stefan Walther](http://qliksite.io).
  
 MIT
 

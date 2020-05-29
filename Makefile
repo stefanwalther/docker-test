@@ -1,3 +1,5 @@
+NODE_VER 			:= $(shell cat .nvmrc)
+
 help:								## Show this help.
 	@echo ''
 	@echo 'Available commands:'
@@ -8,3 +10,7 @@ help:								## Show this help.
 gen-readme:					## Generate README.md (using docker-verb)
 	docker run --rm -v ${PWD}:/opt/verb stefanwalther/verb
 .PHONY: gen-readme
+
+build:
+	docker build -t stefanwalther/docker-test .
+.PHONY: build
