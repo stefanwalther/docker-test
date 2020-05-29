@@ -45,7 +45,7 @@
     "express": "^4.15.3",
     "glob": "^7.1.2",
     "node-schedule": "^1.2.5",
-    "read-pkg-up": "^4.0.0",
+    "read-pkg-up": "^7.0.0",
     "winster": "^0.2.6",
     "winston-logstash": "^0.4.0"
   },
