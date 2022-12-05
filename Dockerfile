@@ -1,56 +1,19 @@
-ARG NODE_VER="14.3.0"
-# --------------------------------------
-#               BASE NODE
-# --------------------------------------
-FROM node:${NODE_VER}-alpine as BASE
+FROM ubuntu:20.04
 
-ARG PORT=3000
-ENV PORT=$PORT
+WORKDIR /var/www
 
-ENV HOME=/app
-RUN mkdir -p $HOME
-WORKDIR $HOME
+RUN useradd -ms /bin/bash pruthvi &&chown -R pruthvi:pruthvi /var/www && chmod -R 777 /var/www
 
-COPY package.json package-lock.json ./
+RUN apt-get update && apt-get -y install software-properties-common && add-apt-repository ppa:ondrej/php
 
-# --------------------------------------
-#              DEPENDENCIES
-# --------------------------------------
-FROM BASE as DEPENDENCIES
+RUN apt-get -y install php7.4 && apt-get install -y php7.4-cli php7.4-json php7.4-fpm php7.4-common php7.4-mysql php7.4-zip php7.4-gd php7.4-mbstring php7.4-curl php7.4-xml php7.4-bcmath
+COPY . .
+COPY --chown=pruthvi:pruthvi . .
 
-RUN npm install --only=production
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# copy production node_modules aside
-RUN cp -R node_modules prod_node_modules
+USER pruthvi
 
-# install ALL node_modules, including 'devDependencies'
-RUN npm install
+CMD php artisan serve --host=0.0.0.0 --port=8000
 
-
-# --------------------------------------
-#                  TEST
-# --------------------------------------
-# run linters, setup and tests
-FROM dependencies AS TEST
-
-COPY .eslintrc.json .
-COPY /src ./src/
-COPY /test ./test/
-
-RUN  npm run lint && npm run test
-
-# --------------------------------------
-#                 RELEASE
-# --------------------------------------
-FROM BASE as RELEASE
-
-# copy production node_modules
-COPY --from=dependencies /app/prod_node_modules ./node_modules
-COPY /src ./src/
-
-COPY ./nodemon.json ./
-
-EXPOSE $PORT
-
-CMD ["npm", "run", "start"]
-
+EXPOSE 8000
