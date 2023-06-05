@@ -23,7 +23,7 @@ jobs:
 
       - name: Set Env Variables
         id: set-env
-        uses: allenevans/set-env@v1.0.0
+        uses: allenevans/set-env@v1.1.1
         with:
           overwrite: false
           DOCKER_REGISTRY: "docker.pkg.github.com"
