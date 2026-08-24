@@ -1,8 +1,8 @@
-ARG NODE_VER="14.3.0"
+ARG NODE_VER=14.3.0
 # --------------------------------------
 #               BASE NODE
 # --------------------------------------
-FROM node:${NODE_VER}-alpine as BASE
+FROM node:${NODE_VER}-alpine AS base
 
 ARG PORT=3000
 ENV PORT=$PORT
@@ -16,7 +16,7 @@ COPY package.json package-lock.json ./
 # --------------------------------------
 #              DEPENDENCIES
 # --------------------------------------
-FROM BASE as DEPENDENCIES
+FROM base AS dependencies
 
 RUN npm install --only=production
 
@@ -31,7 +31,7 @@ RUN npm install
 #                  TEST
 # --------------------------------------
 # run linters, setup and tests
-FROM dependencies AS TEST
+FROM dependencies AS test
 
 COPY .eslintrc.json .
 COPY /src ./src/
@@ -42,7 +42,7 @@ RUN  npm run lint && npm run test
 # --------------------------------------
 #                 RELEASE
 # --------------------------------------
-FROM BASE as RELEASE
+FROM base AS release
 
 # copy production node_modules
 COPY --from=dependencies /app/prod_node_modules ./node_modules
