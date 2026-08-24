@@ -114,9 +114,6 @@ $ curl http://localhost:3000/cmd-cron?def=echo%20foo&cron=*%20*%20*%20*%20*
 
 **Stefan Walther**
 
-* [stefanwalther.io](http://stefanwalther.io)
-* [qliksite.io](http://qliksite.io)
-* [qlikblog.at](http://qlikblog.at)
 * [github/stefanwalther](https://github.com/stefanwalther)
 * [twitter/waltherstefan](http://twitter.com/waltherstefan)
 * [LinkedIn](https://www.linkedin.com/in/stefanwalther/)
@@ -132,7 +129,7 @@ Pull requests and stars are always welcome. For bugs and feature requests, [plea
 I cannot guarantee that I will merge all PRs but I will evaluate them all.
 
 ### License
-Copyright © 2020, [Stefan Walther](http://qliksite.io).
+Copyright © 2020-present, Stefan Walther.
  
 MIT
 

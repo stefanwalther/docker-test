@@ -12,7 +12,7 @@
     "url": "https://github.com/stefanwalther/docker-test/issues"
   },
   "license": "MIT",
-  "author": "Stefan Walther <swr.nixda@gmail.com> (http://qliksite.io)",
+  "author": "Stefan Walther <swr.nixda@gmail.com>",
   "main": "index.js",
   "repository": {
     "type": "git",
