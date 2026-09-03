@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "express": "^4.15.3",
-    "glob": "^7.1.2",
+    "glob": "^7.1.7",
     "node-schedule": "^1.2.5",
     "read-pkg-up": "^4.0.0",
     "winster": "^0.2.6",
