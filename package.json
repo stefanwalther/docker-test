@@ -12,6 +12,9 @@
     "url": "https://github.com/stefanwalther/docker-test/issues"
   },
   "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "author": "Stefan Walther <swr.nixda@gmail.com>",
   "main": "index.js",
   "repository": {
