@@ -1,4 +1,4 @@
-ARG NODE_VER=14.3.0
+ARG NODE_VER=22.18.0
 # --------------------------------------
 #               BASE NODE
 # --------------------------------------
@@ -18,7 +18,7 @@ COPY package.json package-lock.json ./
 # --------------------------------------
 FROM base AS dependencies
 
-RUN npm install --only=production
+RUN npm install --omit=dev
 
 # copy production node_modules aside
 RUN cp -R node_modules prod_node_modules
