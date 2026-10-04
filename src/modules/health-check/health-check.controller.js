@@ -1,4 +1,4 @@
-const pkg = require('read-pkg-up').sync().pkg;
+const pkg = require('../../../package.json');
 
 class Controller {
 

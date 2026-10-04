@@ -4,7 +4,7 @@ const HttpStatus = require('http-status-codes');
 const AppServer = require('./../../src/app-server');
 
 const defaultConfig = require('./../lib/config');
-const pkg = require('read-pkg-up').sync().pkg;
+const pkg = require('../../package.json');
 
 describe('logs => health-check', () => {
 
