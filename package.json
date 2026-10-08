@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "express": "^5.2.1",
-    "node-schedule": "^1.2.5",
+    "node-schedule": "^2.1.1",
     "winster": "^0.2.6",
     "winston-logstash": "^0.4.0"
   },
